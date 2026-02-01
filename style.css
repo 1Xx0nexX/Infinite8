@@ -1,0 +1,362 @@
+/* ================= RESET + FONT ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Anakotmai', 'Itim', sans-serif;
+}
+
+@font-face {
+  font-family: 'MyFont';  
+  src: url('anakotmai-medium.woff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Anakotmai';
+  src: url('anakotmai-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* ================= fadein ================= */
+body, .policy-page {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ================= Main เนาะ  ================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  background-image: url("Mainlogo2.png"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: clamp(36px, 8vw, 80px);
+  letter-spacing: 5px;
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text; 
+  background-clip: text;         
+  -webkit-text-fill-color: transparent;
+  margin-top: 99px;
+}
+
+.subtitle {
+  margin: 100px 0 40px;
+  font-size: clamp(18px, 3.2vw, 30px);
+  font-weight: 1;
+  margin-top: 39px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 40px;
+  border: none;
+  font-size: 18px;
+  background: linear-gradient(90deg, #bf953f 0%, #f7ee8b 50%, #b38728 100%);
+  color: #4d3900;
+  font-weight: bold;
+  
+  text-decoration: none;
+  transition: 0.4s;
+  box-shadow: 0 2px 12px #b3872840;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #fcf6ba 0%, #bf953f 100%);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 24px #b3872870;
+}
+
+.policy-page {
+  background: black;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.policy-page section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.9s cubic-bezier(0.4,0,0.2,1);
+}
+
+.policy-page section.visible {
+  opacity: 1;
+}
+
+.policy-text h2 {
+  font-size: clamp(28px, 6vw, 60px);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 900;
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.policy-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  background: #232323;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: calc(23% - 16px);
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  opacity: 1;
+  transform: none;
+}
+
+.policy-card.fadein {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.policy-card.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 200px;
+  background: #242424;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-label {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2e2e2e;
+  padding: 12px 0;
+}
+
+.card-desc {
+  padding: 15px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transform: none;
+  background: #b53d27;
+  border-radius: 0 0 15px 15px;
+}
+
+
+.card-desc {
+  padding: 15px;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transform: none;
+  background: rgba(255,255,255,0.88);
+  border-radius: 0 0 15px 15px;
+}
+
+.policy-card {
+  background: #131313;
+  color: #2e2e2e;
+  border-radius: 15px;
+  overflow: hidden;
+  width: calc(23% - 16px);
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  opacity: 1;
+  transform: none;
+}
+
+.desc-red { background: #C23B2A; }
+.desc-green { background: #292929; }
+.desc-blue { background: #143068; }
+
+
+/* =============================================== พื้นหลัง Section ============================================================================ */
+#policy1 {
+  background-image: url("MainlogoBlur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Remove any border or outline */
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#policy3 {
+  background-image: url("MainlogoBlur2.png"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Add vertical spacing between cards */
+}
+#policy4 {
+  background-image: url("MainlogoBlur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Remove any border or outline */
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+/* ================= MEDIA QUERIES ================= */
+@media(max-width: 1024px) {
+  .policy-card { width: calc(45% - 12px); max-width: 320px; }
+  .policy-text h2 { font-size: clamp(24px,5vw,48px); }
+  .card-image { max-height: 140px; }
+}
+
+@media(max-width: 768px) {
+  .policy-card { width: 90%; max-width: 400px; }
+  .policy-text h2 { font-size: clamp(20px,6vw,36px); }
+  .card-desc { font-size: 12px; padding: 10px; }
+  .card-image { max-height: 120px; }
+}
+
+@media(max-width: 480px) {
+  .policy-text h2 { font-size: clamp(18px,4vw,24px); }
+  .card-desc { font-size: 11px; padding: 8px; }
+}
+
+@media(max-width: 1024px) {
+  .policy-card { width: calc(45% - 12px); max-width: 320px; }
+  .policy-text h2 { font-size: clamp(24px,5vw,48px); }
+  .card-image { max-height: 140px; }
+}
+
+@media(max-width: 768px) {
+  .policy-card { width: 90%; max-width: 400px; }
+  .policy-text h2 { font-size: clamp(20px,6vw,36px); }
+  .card-desc { font-size: 12px; padding: 10px; }
+  .card-image { max-height: 120px; }
+}
+
+@media(max-width: 480px) {
+  .policy-text h2 { font-size: clamp(18px,4vw,24px); }
+  .card-desc { font-size: 11px; padding: 8px; }
+}
+/* ================= SECTION FADE-IN ================= */
+section.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#policy1 .card-label {
+  font-family: 'Bungee', 'Itim', sans-serif;
+}
+
+/* ================= FLOATING IG BUTTON ================= */
+.ig-float-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px #0002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.ig-float-btn:hover {
+  box-shadow: 0 4px 24px #c1358450;
+  transform: scale(1.08);
+}
+
+.ig-float-btn svg {
+  width: 36px;
+  height: 36px;
+  display: block;
+}

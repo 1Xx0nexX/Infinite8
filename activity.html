@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นโยบายกิจกรรมต่างๆ - INFINIE</title>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Anakotmai:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* สไตล์ Luxury Gold */
+  body.study-page {
+    background: url('MainlogoBlur4.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1d382;
+    font-family: 'Anakotmai', 'Itim', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  body.study-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* ใส่ Overlay บางๆ ให้พื้นหลังไม่กวนสายตา */
+    z-index: -1;
+  }
+
+  .luxury-container {
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
+  }
+
+  .main-header {
+    text-align: center;
+    font-size: 28px;
+    color: #fff; /* เปลี่ยนเป็นสีขาวเพื่อให้เด่นบนพื้นหลัง */
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+  }
+
+  .gold-card {
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #ec2719;
+    border-radius: 30px;
+    padding: 30px 15px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  }
+
+  .card-logo {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 40px;
+    opacity: 0.8;
+  }
+
+.card-title {
+  /* ไล่เฉดสีแดง: แดงเข้ม -> แดงสด -> แดงเข้ม */
+  background: linear-gradient(
+    90deg,
+    #8b0000, 
+    #ff0000, 
+    #ff4d4d, 
+    #ff0000, 
+    #8b0000
+  );
+  
+  /* บังคับให้พื้นหลังปรากฏแค่บนตัวอักษร */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* ทำให้สีเนื้อตัวอักษรโปร่งใสเพื่อโชว์ Gradient */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  
+  /* ป้องกันขอบหยักในบาง Browser */
+  display: block; 
+}
+
+  .video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .image-wrapper img {
+    width: 90%;
+    height: 70%;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 146, 65, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+
+  /* --- ส่วนที่ทำให้จัดเรียงสวยขึ้น --- */
+  .info-box {
+    background: rgba(255, 255, 255, 0.05); /* กล่องโปร่งแสง */
+    border-left: 3px solid #af1010; /* เส้นสีทองแนวตั้งช่วยให้ดูเป็นระเบียบ */
+    margin: 25px 10px;
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .content1-text {
+    color: #ffffff !important;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left; /* จัดชิดซ้ายทำให้อ่านข้อความยาวๆ ได้ง่ายกว่า */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);   
+    background-color: #940b0b;  
+    font-weight: lighter;
+
+  }
+  .content-text {
+    color: #ffffff !important;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: left; /* จัดชิดซ้ายทำให้อ่านข้อความยาวๆ ได้ง่ายกว่า */
+    margin: 0;
+    
+    font-weight: 100;
+  }
+
+   .content1-text {
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left; /* จัดชิดซ้ายทำให้อ่านข้อความยาวๆ ได้ง่ายกว่า */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);   
+   
+
+  }
+  .highlight {
+    color: #bd1414;
+    font-weight: bold;
+  }
+
+  .sub-card {
+    margin-top: 30px;
+    background: rgba(255, 1, 1, 0.1);
+    border: 1px solid rgba(138, 3, 3, 0.3);
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+  }
+
+  .btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 45px;
+    background: linear-gradient(to bottom, #460101, #d40404);
+    color: #d4d4d4;
+    text-decoration: navajowhite;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .btn-back:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(184, 146, 65, 0.3);
+
+  }
+.highlight{
+  background: linear-gradient(
+    90deg,
+    #8b0000,   /* แดงเข้ม */
+    #ff0000,   /* แดงสด */
+    #ff6666,   /* แดงอ่อน */
+    #ff9999,   /* ชมพูอ่อน */
+    #ff0000,   /* แดงสด */
+    #8b0000    /* แดงเข้ม */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: lighter;
+}
+  .highlight1 {
+  background: linear-gradient(
+    90deg,
+    #dba503,
+    #d4af37,
+    #ffd700,
+    #fff4b0,
+    #d4af37,
+    #a57c01
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: lighter;
+}
+</style>
+</head>
+<body class="study-page">
+
+<div class="luxury-container">
+
+
+       <div class="card-title">นโยบายกิจกรรมต่างๆ</div>
+
+    <div class="video-wrapper">
+      <video width="100%" height="300" controls>
+        <source src="mvgang.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <div class="info-box">
+      <p class="content2-text">
+        "สายใยที่ผูกพัน....จากรุ่นพี่สู่รุ่นน้อง" <br>
+        <p></p>
+        <p class="content-text">
+กิจกรรม <span class="highlight">พี่ผูกไทให้น้อง</span> ไม่ใช่แค่การจัดเครื่องแต่งกายให้เรียบร้อย แต่คือการส่งต่อความรัก ความปรารถนาดี 
+<br>และแรงบันดาลใจจากพี่สู่ตัวแทนรุ่นต่อไป<br>
+        พรรค <span class="highlight1">INFINITE</span> พร้อมสานต่อทุกกิจกรรมอันทรงคุณค่าที่รุ่นพี่ได้ริเริ่มไว้ 
+เพราะเราเชื่อว่ารากฐานที่แข็งแกร่ง จะพาชาว <span class="highlight1">INFINITE</span> ทุกคนก้าวไปสู่ความสำเร็จที่ยั่งยืนร่วมกัน
+
+
+      </p>
+    </div>
+    
+ <div class="video-wrapper">
+      <video width="100%" height="300" controls>
+        <source src="RockNoDrug.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="info-box">
+      <p class="content2-text">
+        ""ใช้เสียงเพลง...สยบยาเสพติด" <br>
+</p>
+<p class="content-text">
+    
+พรรค<span class="highlight1">INFINITE</span>มุ่งมั่นสานต่อเจตนารมณ์จากรุ่นสู่รุ่นกับกิจกรรม <span class="highlight">Rock no Drug</span> <br>พื้นที่ที่เปิดกว้างให้ชาว <span class="highlight1">INFINITE</span> ได้มาปล่อยของ <br>โชว์ศักยภาพทางดนตรีให้โลกเห็น! 
+เราพร้อมสนับสนุนให้ดนตรีเป็นเครื่องมือในการสร้างสรรค์ และสร้างสังคมที่แข็งแกร่งห่างไกลยาเสพติด<br>
+
+<br>เพราะเวทีนี้....มีไว้สำหรับคนมีไฟที่ไม่พึ่งพาอบายมุข!
+
+
+      </p>
+    </div>
+  <div class="sub-card">
+    <p style="margin-bottom: 10px; font-style: italic; color: #ffffff; font-size: 12px;">
+      เพราะการเรียนรู้ไม่ใช่แค่เรียนในห้อง แต่คือการเติบโตในทุกๆ กิจกรรมที่ทําร่วมกัน <br> " เลือกเบอร์ 8 พรรค <span class="highlight1">INFINIE</span> "
+    </p>
+    
+    <a href="index.html" class="btn-back">กลับหน้าหลัก</a>
+  </div>
+</div>
+
+</body>
+</html>
