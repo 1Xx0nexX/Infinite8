@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นโยบายของพรรค - INFINIE</title>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Anakotmai:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* สไตล์ Luxury Gold ให้เข้ากับหน้า Study */
+  body.policy-page {
+    background: url('MainlogoBlur4.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* เปลี่ยนสีอักษรหลักเป็นขาว */
+    font-family: 'Anakotmai',;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Overlay พื้นหลัง */
+  body.policy-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+  
+    z-index: -1;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+  }
+
+  .main-header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+
+  /* เงาให้ดูเด่น */
+  text-shadow: 2px 2px 5px rgba(22, 16, 16, 0.562);
+  }
+
+  /* การ์ดนโยบายสไตล์ Gold Card */
+.gold-card {
+    background: rgba(26, 26, 26, 0.9);
+    border: 2px solid #bd1515; /* เปลี่ยนจากสีแดงเป็นทองให้เข้าธีม */
+    border-radius: 30px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+
+
+
+  .gold-card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* ปรับขนาดรูปภาพในกรอบ */
+  .image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .image-wrapper img {
+    width: 85%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 15px;
+    border: 1px solid rgba(184, 146, 65, 0.5);
+    background: rgba(0,0,0,0.3);
+  }
+
+
+  .card-title {
+    color: #d8bc1d;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(184, 146, 65, 0.3);
+    padding-bottom: 10px;
+  }
+
+.card-desc {
+    background: rgba(255, 255, 255, 0.05); /* เพิ่มพื้นหลังจางๆ ให้ดูเป็นกล่อง */
+    border-left: 3px solid #7e0202; /* เพิ่มขีดสีเหลืองทองด้านซ้าย */
+    margin: 15px 10px;
+    padding: 15px 20px;
+    border-radius: 0 15px 15px 0;
+    color: #e0e0e0;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left; /* จัดข้อความชิดซ้ายเพื่อความสวยงาม */
+  }
+
+  .card-desc p {
+    margin: 8px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+
+  /* ปุ่มกลับหน้าหลัก */
+  .footer-nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .btn-back {
+    display: inline-block;
+    padding: 12px 35px;
+    background: linear-gradient(to bottom, #f1d382, #b89241);
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+  }
+
+  .btn-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(241, 211, 130, 0.6);
+  }
+</style>
+</head>
+<body class="policy-page">
+
+<div class="container">
+  <div class="main-header">นโยบายเกี่ยวกับ E-Sports</div>
+
+  <div class="gold-card">
+    <div class="image-wrapper">
+      <img src="Valorant.png" alt="Valorant">
+    </div>
+    <div class="card-title">Valorant</div>
+    <div class="card-desc">
+      <p>• สนับสนุนการจัดการแข่งขัน Valorant</p>
+      <p>• มีของรางวัลแก่ผู้ชนะเลิศ</p>
+      <p>• จัดการแข่งขันแบบแบ่งกลุ่ม</p>
+    </div>
+  </div>
+
+  <div class="gold-card">
+    <div class="image-wrapper">
+      <img src="Roblox.png" alt="Roblox">
+    </div>
+    <div class="card-title">Roblox</div>
+    <div class="card-desc">
+      <p>• สนับสนุนการแข่งขัน Roblox</p>
+      <p>• มีของรางวัลแก่ผู้ชนะเลิศ</p>
+      <p>• โดยจะแข่งขันหลายแมพ</p>
+      <p>• จัดการแข่งขันแบบเก็บคะแนน</p>
+    </div>
+  </div>
+
+  <div class="gold-card">
+    <div class="image-wrapper">
+      <img src="PES.png" alt="eFootball">
+    </div>
+    <div class="card-title">eFootball</div>
+    <div class="card-desc">
+      <p>• สนับสนุนการจัดการแข่งขัน eFootball</p>
+      <p>• มีของรางวัลแก่ผู้ชนะเลิศ</p>
+      <p>• จัดการแข่งขันแบบแบ่งกลุ่ม</p>
+    </div>
+  </div>
+
+  <div class="gold-card">
+    <div class="image-wrapper">
+      <img src="freefire.png" alt="Free Fire">
+    </div>
+    <div class="card-title">Free Fire</div>
+    <div class="card-desc">
+      <p>• สนับสนุนการแข่งขัน Free Fire</p>
+      <p>• มี of ของรางวัลแก่ผู้ชนะเลิศ</p>
+      <p>• จัดการแข่งขันแบบโดดร่ม</p>
+    </div>
+  </div>
+
+  <div class="gold-card">
+    <div class="image-wrapper">
+      <img src="rov.png" alt="RoV">
+    </div>
+    <div class="card-title">RoV</div>
+    <div class="card-desc">
+      <p>• สนับสนุนการจัดการแข่งขัน RoV</p>
+      <p>• มีของรางวัลแก่ทีมผู้ชนะเลิศ</p>
+      <p>• จัดการแข่งขันแบบแบ่งกลุ่ม</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <a href="index.html" class="btn-back">กลับหน้าหลัก</a>
+  </div>
+</div>
+
+</body>
+</html>
